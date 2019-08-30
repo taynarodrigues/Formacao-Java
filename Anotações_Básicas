@@ -1,0 +1,54 @@
+Visibilidade de Atributos e Métodos
++ publico
+- privado
+# protegido
+
+classe Caneta
++ modelo
++ cor
+- ponta
+# carga
+# tampada
+
++ escrever()
++ rabiscar()
++ pintar()
+- tampar()
+- destampar()
+
+Aula04_Métodos Especiais
+
+protected é público para os filhos
+super -> ver a hierarquia "Olhar pra cima!", e que o atributo não está definido na classe
+
+A palavra chave com a menor visibilidade é private, depois vem o protected e depois public.
+
+private - apenas visível dentro da classe
+
+protected - visível dentro da classe e também para as filhas
+
+public - visível em todo lugar
+
+Repare também que protected é relacionado com a herança.
+
+1) Uma classe pode ter várias filhas, mas apenas uma mãe.
+
+2) A partir de uma instância de uma classe filha, podemos chamar qualquer método público que tenha sido declarado na classe mãe.
+
+
+
+Nessa aula de Polimorfismo aprendemos que:
+
+objetos não mudam de tipo;
+a referência pode mudar, e aí entra o polimorfismo;
+o polimorfismo permite usar referências mais genéricas para a comunicação com um objeto;
+o uso de referências mais genéricas permite desacoplar sistemas.
+
+Construtores não são herdados
+Um construtor da classe mãe pode ser chamado através do super()
+
+ sobre os métodos abstratos?
+Não possuem corpo (implementação), apenas definem a assinatura.
+
+Classes e métodos abstratos consomem menos memória e por conta disso melhoram o desempenho do nosso programa.
+Correto, um método abstrato define apenas a assinatura (visibilidade, retorno, nome do método e parâmetros).
