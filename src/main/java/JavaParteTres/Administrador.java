@@ -1,6 +1,6 @@
 package JavaParteTres;
 
-public class Administrador extends FuncionarioAutenticavel {
+public class Administrador extends Funcionario {
 
 	private int senha;
 
