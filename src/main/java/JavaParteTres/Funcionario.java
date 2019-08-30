@@ -1,18 +1,13 @@
 package JavaParteTres;
 
+//Não pode instanciar dessa classe, porque é abstrata
 public abstract class Funcionario {
 	private String nome;
 	private int cpf;
 	private double salario;
 
-	// Construtor tem sempre o nome da classe porém não retorna nada
-	public Funcionario() {
-
-	}
-
-	public double getBonificacao() {
-		return this.salario * 0.05;
-	}
+	// método sem corpo, não há implementação
+	public abstract double getBonificacao();
 
 	public String getNome() {
 		return nome;

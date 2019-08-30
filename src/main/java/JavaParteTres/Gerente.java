@@ -23,7 +23,7 @@ public class Gerente extends Funcionario {
 
 	public double getBonificacao() { //reescrita -> a mesma assinatura...
 		System.out.println("Chamando o método de bonificacao do gerente");
-		return super.getBonificacao() + super.getSalario();
+		return super.getSalario();
 		
 	}
 
