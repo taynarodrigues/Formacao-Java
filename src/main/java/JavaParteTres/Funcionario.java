@@ -2,6 +2,8 @@ package JavaParteTres;
 
 //Não pode instanciar dessa classe, porque é abstrata
 public abstract class Funcionario {
+
+	
 	private String nome;
 	private int cpf;
 	private double salario;

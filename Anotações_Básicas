@@ -52,3 +52,29 @@ Não possuem corpo (implementação), apenas definem a assinatura.
 
 Classes e métodos abstratos consomem menos memória e por conta disso melhoram o desempenho do nosso programa.
 Correto, um método abstrato define apenas a assinatura (visibilidade, retorno, nome do método e parâmetros).
+
+ sobre classes abstratas? 
+
+Alternativa correta
+Podem ter atributos
+
+ 
+Correto, podemos sim ter atributos! Uma classes abstrata é uma classe normal, só não pode instanciar e pode ter métodos abstratos. O resto continua valendo!
+
+Alternativa correta
+Podem ter métodos concretos (com implementação)
+
+ 
+Correto, como podem ter atributos também podem ter métodos concretos!
+
+Alternativa correta
+Podem ter métodos abstratos (sem implementação)
+
+ 
+Correto, como vimos uma classe abstrata pode ter métodos sem implementação. Dessa forma obrigamos um filho implementar o método.
+
+Alternativa correta
+Não podem ser instanciadas
+
+ 
+Correto, pois o que é abstrato (a classe) não pode se tornar concreto (objeto). Por isso não podemos instanciar objetos de uma classe abstrata.
