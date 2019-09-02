@@ -4,7 +4,13 @@ package JavaParteTres;
 
 public class Gerente extends Funcionario implements Autenticavel {
 
-	private int senha;
+	// atributo guardado
+	private AutenticacaoUtil autenticador;
+
+	// criar construtor
+	public Gerente() {
+		this.autenticador = new AutenticacaoUtil();
+	}
 
 	public double getBonificacao() { // reescrita -> a mesma assinatura...
 		System.out.println("Chamando o método de bonificacao do gerente");
@@ -14,14 +20,10 @@ public class Gerente extends Funcionario implements Autenticavel {
 
 	public void setsenha(int senha) {
 
-		this.senha = senha;
+		this.autenticador.setsenha(senha);
 	}
 
 	public boolean autentica(int senha) {
-		if (this.senha == senha) {
-			return true;
-		} else {
-			return false;
-		}
+		return this.autenticador.autentica(senha);
 	}
 }

@@ -2,7 +2,12 @@ package JavaParteTres;
 
 public class Administrador extends Funcionario implements Autenticavel{
 
-	private int senha;
+	private AutenticacaoUtil autenticador;
+	
+	//criar o construtor
+	public Administrador() {
+		this.autenticador = new AutenticacaoUtil();
+	}
 	
 	@Override
 	public double getBonificacao() {
@@ -11,16 +16,12 @@ public class Administrador extends Funcionario implements Autenticavel{
 	
 
 	public void setsenha(int senha) {
-		this.senha = senha;
+		this.autenticador.setsenha(senha);
 		
 	}
 
 	public boolean autentica(int senha) {
-		if (this.senha == senha) {
-			return true;
-		} else {
-			return false;
-		}
+		return this.autenticador.autentica(senha);
 	}
 
 

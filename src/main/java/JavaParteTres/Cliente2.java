@@ -4,20 +4,28 @@ package JavaParteTres;
 
 public class Cliente2 implements Autenticavel {
 
-	private int senha;
+	
+	//guardar um atributo, declarando uma variável
+	private AutenticacaoUtil autenticador;
+	
+	
+	//criar um construtor padrão e criar uma instancia da AutenticacaoUtil
+	public Cliente2() {
+		 this.autenticador = new AutenticacaoUtil();
+	}
 
 	public void setsenha(int senha) {
-		this.senha = senha;
+		this.autenticador.setsenha(senha);
 
 	}
+//
+//	public boolean autentica(int senha) {
+//		boolean autenticou = this.util.autentica(senha);
+//		return autenticou;
+//	}
+	//ou código + enchuto
 
 	public boolean autentica(int senha) {
-		if (this.senha == senha) {
-			return true;
-		} else {
-			return false;
-
-		}
+		return this.autenticador.autentica(senha); //o método delega a chamada
 	}
-
 }
