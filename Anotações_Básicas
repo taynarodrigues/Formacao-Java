@@ -109,3 +109,21 @@ Temos polimorfismo quando uma classe extende de outra ou também quando uma clas
 
  
 Correta, temos polimorfismo via herança ou interface.
+
+Revisando conceitos de herança
+A herança captura o que é comum e isola aquilo que é diferente entre classes. Há um acoplamento forte entre mãe e filho, por isso é preciso ter muito cautela na hora de usar a herança.
+
+Revisando conceitos de interface
+
+Garante que todos os métodos de classes que implementam uma interface possam ser chamados com segurança.
+
+ 
+Correto! Isso é a ideia do contrato, garantindo que a classe tenha um comportamento, basta assinar o contrato (implementar a inteface).
+-> Interfaces não podem possuir atributos.
+ -> Na verdade interfaces são implementadas, não estendidas. 
+
+Composição x Herança
+Com composições e interfaces teremos mais flexibilidade com nosso código, já que não nos prenderemos ao acoplamento que a herança propõe.
+Herança possibilita sim polimorfismo E reutilização.
+Com interfaces temos uma alternativa ao polimorfismo, com a composição temos uma alternativa a reutilização de código.
+ Normalmente o uso de interfaces (para definir o contrato e ter polimorfismo) e composição (para ter reutilização de código) é mais flexível comparado a herança.
