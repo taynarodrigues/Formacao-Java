@@ -4,6 +4,8 @@ public class TesteFuncionario {
 
 	public static void main(String[] args) {
 		
+		
+		
 		Gerente nico = new Gerente();
 		nico.setNome("Nico Stepaat");
 		nico.setCpf(223355646-9);

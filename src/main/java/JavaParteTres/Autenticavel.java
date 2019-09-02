@@ -1,23 +1,15 @@
 package JavaParteTres;
+//Contrato Autenticável
+	//quem assinar esse contrato, precisa implementar
+			//método setsenha
+			//método autentica
 
-public abstract class Autenticavel{
+public abstract interface Autenticavel{
 
-	private int senha;
+	
 
-	public boolean autentica(int senha) {
-		if (this.senha == senha) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-
-	public int getSenha() {
-		return senha;
-	}
-
-	public void setSenha(int senha) {
-		this.senha = senha;
-	}
+	public abstract void setsenha(int senha);
+	
+	public abstract boolean autentica(int senha);
 
 }

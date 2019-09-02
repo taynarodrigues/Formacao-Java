@@ -78,3 +78,9 @@ Não podem ser instanciadas
 
  
 Correto, pois o que é abstrato (a classe) não pode se tornar concreto (objeto). Por isso não podemos instanciar objetos de uma classe abstrata.
+
+Utilizamos este termo somente quando queremos herdar algo de outra classe, mas com a interface, estamos "assinando um contrato", isto significa no mundo Java que estamos implementando, por isso, utilizamos o implements:
+
+public class Cliente implements Autenticavel {
+
+}
