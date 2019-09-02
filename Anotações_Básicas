@@ -153,3 +153,12 @@ Não é possível ter uma instrução catch, sem uma instrução try.
  
 Exato. A lógica de tratamento de erro no bloco catch só é disparada quando uma exceção é lançada dentro de um bloco try.
 O bloco try apenas delimita a área na qual uma exceção pode ser lançada. É através do bloco catch que lidamos com a exceção capturada dentro de um bloco try.
+
+Multi-Catch
+try {
+    System.out.println(1 / 0);
+} catch (ArithmeticException | NullPointerException ex) {
+    ex.printStackTrace();
+}
+ 
+Através de um | (pipe) na cláusula catch, podemos capturar mais de uma exceção. Com isso, podemos ter um único bloco para tratar um ou mais exceções.

@@ -1,6 +1,6 @@
 package javaPilha;
 
-public class Fluxo {
+public class FluxoComTratamento {
 	public static void main(String[] args) {
 		System.out.println("Ini do main");
 		try {
@@ -21,15 +21,22 @@ public class Fluxo {
 
 	private static void metodo2() {
 		System.out.println("Ini do metodo2");
-		
-	
-		// criar objeto da classe
-		ArithmeticException exception = new ArithmeticException("ERRO");
-		//Jogar o objeto
-		throw exception;
-		
-		
-//		System.out.println("Fim do metodo2");
+		for (int i = 1; i <= 5; i++) {
+			System.out.println(i);
+			 int a = i / 0; // código perigoso!!!
+			Conta c = null;
+			c.deposita();
+
+			/*
+			 * Quando tentamos compilar Conta c = null Aparece ERRO NO CONSOLE
+			 * 
+			 * Exception in thread "main" java.lang.NullPointerException at
+			 * javaPilha.Fluxo.metodo2(Fluxo.java:29) at
+			 * javaPilha.Fluxo.metodo1(Fluxo.java:19) at javaPilha.Fluxo.main(Fluxo.java:7)
+			 */
+
+		}
+		System.out.println("Fim do metodo2");
 	}
 
 }
