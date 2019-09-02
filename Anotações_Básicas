@@ -141,3 +141,15 @@ O que é Depuração?
 
 
 null -> significa que essa referência não aponta para nenhum objeto
+
+Sobre exceções
+Exceções não tratadas caem na pilha de execução procurando por alguém que saiba lidar com ela.
+Toda exceção em Java possui um nome que a identifica. Essa abordagem torna seu entendimento mais fácil do que o uso de números mágicos (códigos de erros) como 15, 7012 ou 16.
+
+Sobre os blocos try e catch
+Para tratarmos uma exceção, que pode ocorrer enquanto nosso programa esta sendo executado, precisamos tratá-la antecipadamente com um bloco de código específico.
+Não é possível ter uma instrução catch, sem uma instrução try.
+
+ 
+Exato. A lógica de tratamento de erro no bloco catch só é disparada quando uma exceção é lançada dentro de um bloco try.
+O bloco try apenas delimita a área na qual uma exceção pode ser lançada. É através do bloco catch que lidamos com a exceção capturada dentro de um bloco try.
