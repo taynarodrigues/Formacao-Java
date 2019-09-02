@@ -162,3 +162,15 @@ try {
 }
  
 Através de um | (pipe) na cláusula catch, podemos capturar mais de uma exceção. Com isso, podemos ter um único bloco para tratar um ou mais exceções.
+
+Exceção: Não basta instanciar a exceção, é necessário lançá-la através do throw.
+Exemplo
+private static void metodo2() {
+    System.out.println("Início do metodo2");
+    ArithmeticException exception = new ArithmeticException();
+    throw exception;
+}
+
+já que não é necessário guardar a exceção em uma referência, podendo lançá-la diretamente em uma linha só, por exemplo:
+
+throw new ArithmeticException();
