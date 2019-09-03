@@ -1,10 +1,12 @@
 package javaPilha;
 
-public class Conexao {
+//A ideia da interface é imprimir um contrato -> Implementar um método
+public class Conexao implements AutoCloseable{
 	
 	//construtor para abrir a conexao
 	public Conexao(){
 		System.out.println("abrindo conexao");
+		throw new IllegalStateException();
 	}
 	
 	//método para ler dados
@@ -13,7 +15,9 @@ public class Conexao {
 		throw new IllegalStateException();
 	}
 	
-	public void fecha() {
+
+	@Override
+	public void close(){		
 		System.out.println("Fechando conexao");
 	}
 
