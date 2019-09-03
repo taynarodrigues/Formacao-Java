@@ -17,22 +17,19 @@ public abstract class Conta {
 		System.out.println("E agencia " + this.agencia);
 	}
 
-	//Métodos concretos
+	// Métodos concretos
 	public abstract void deposita(double valor);
 
 	public void saca(double valor) throws SaldoInsuficienteException {
-		
 		if (this.saldo < valor) {
-			//problema
-			//jogar o problema usar -> throw no singular "FAZ"
 			throw new SaldoInsuficienteException("Saldo: " + this.saldo + ", Valor: " + valor);
-		}
-		this.saldo -= valor;		
+	}
+		this.saldo -= valor;
 	}
 
-	public void transfere(double valor, Conta destino) throws SaldoInsuficienteException {
-		this.saca(valor);
-		destino.deposita(valor);
+	public void transfere(double valor, Conta destino) throws SaldoInsuficienteException{
+	    this.saca(valor);
+	    destino.deposita(valor);
 	}
 
 	public double getSaldo() {
@@ -70,7 +67,7 @@ public abstract class Conta {
 	public Cliente getTitular() {
 		return titular;
 	}
-	
+
 	public static int getTotal() {
 		return Conta.total;
 	}
