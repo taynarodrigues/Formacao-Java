@@ -174,3 +174,73 @@ private static void metodo2() {
 já que não é necessário guardar a exceção em uma referência, podendo lançá-la diretamente em uma linha só, por exemplo:
 
 throw new ArithmeticException();
+
+
+Anotações de Exceções
+
+1-Existe uma hierarquia grande de classes que representam exceções. Por exemplo, ArithmeticException é filha de RuntimeException, que herda de Exception, que por sua vez é filha da classe mais ancestral das exceções, Throwable. Conhecer bem essa hierarquia significa saber utilizar exceções em sua aplicação.
+2-Throwable é a classe que precisa ser extendida para que seja possível jogar um objeto na pilha (através da palavra reservada throw)
+3-A hierarquia iniciada com a classe Throwable é dividida em exceções e erros. Exceções são usadas em códigos de aplicação. Erros são usados exclusivamente pela máquina virtual.Classes que comunicam erros da máquina virtual herdam de Error. 
+4-StackOverflowError é um erro da máquina virtual para informar que a pilha de execução não tem mais memória.
+5-Exceções são separadas em duas grandes categorias: aquelas que são obrigatoriamente verificadas pelo compilador e as que não são verificadas. As primeiras são denominadas checked e são criadas através do pertencimento a uma hieraquia que não passe por RuntimeException. As segundas são as unchecked, e são criadas como descendentes de RuntimeException.
+
+Para fixar ainda mais, listamos os tópicos dessa aula:
+
+Existe uma hierarquia grande de classes que representam exceções. Por exemplo, ArithmeticException é filha de RuntimeException, que herda de Exception, que por sua vez é filha da classe mais ancestral das exceções, Throwable. Conhecer bem essa hierarquia significa saber utilizar exceções em sua aplicação.
+Throwable é a classe que precisa ser extendida para que seja possível jogar um objeto na pilha (através da palavra reservada throw)
+É na classe Throwable que temos praticamente todo o código relacionada às exceções, inclusive getMessage() e printStackTrace(). Todo o resto da hierarquia apenas possui algumas sobrecargas de construtores para comunicar mensagens específicas
+A hierarquia iniciada com a classe Throwable é dividida em exceções e erros. Exceções são usadas em códigos de aplicação. Erros são usados exclusivamente pela máquina virtual.
+Classes que herdam de Error são usadas para comunicar erros na máquina virtual. Desenvolvedores de aplicação não devem criar erros que herdam de Error.
+StackOverflowError é um erro da máquina virtual para informar que a pilha de execução não tem mais memória.
+Exceções são separadas em duas grandes categorias: aquelas que são obrigatoriamente verificadas pelo compilador e as que não são verificadas.
+As primeiras são denominadas checked e são criadas através do pertencimento a uma hieraquia que não passe por RuntimeException.
+As segundas são as unchecked, e são criadas como descendentes de RuntimeException.
+
+
+UNCHECKED x CHECKED
+Unchecked-> Não são verificados pelo compilador
+Checked->São veriificados pelo compilador
+
+Lembrando, para ser unchecked precisa estender a classe RuntimeException.
+Em geral, apenas um try isolado nunca funciona. Precisa ter "algo" a mais.
+Criamos um catch genérico que captura qualquer exceção, incluindo exceções checked.
+
+Isso pode parecer uma boa prática, mas normalmente não é. Como regra geral, sempre tente ser mais especifico possível no bloco catch favorecendo vários blocos catch ou usando multi-catch. 
+try {
+    metodoPerigosoQuePodeLancarVariasExcecoes();
+} catch(Exception ex) {
+    ex.printStackTrace();
+}
+
+De que maneira as exceptions podem ajudar a melhorar o código de seu programa?
+
+a - Exceções tem um nome e, caso esse nome seja expressivo, documenta o problema que está ocorrendo.
+
+b - Exceções podem ter uma mensagem, ou seja, o problema e o estado das variáveis podem ser descritos na mensagem.
+
+c - Exceções mudam o fluxo de execução, ou seja, evitam que o problema siga o fluxo "normal" quando algo excepcional acontece.
+
+d - Exceções podem ser tratadas, ou seja, podemos voltar para a execução "normal" caso o "problema" esteja resolvido.
+
+
+USAR CHECKED
+Como a exceção é checked, devemos usar throws SaldoInsuficienteException na assinatura do método saca da classe ContaCorrente.
+
+ 
+Correto! Repare que chamamos super.saca(..) no método saca da classe ContaCorrente. O compilador perecebe que o método da classes mãe tem o throws de uma exceção checked é obriga o método filho tomar uma atitude.
+
+Bloco finally
+
+Um try sozinho nunca é válido. Ele exige pelo menos um catch ou um finally!
+- O bloco finally é opcional independente do catch.
+-O bloco finally sempre será executado (sem ou com exceção).
+ - O bloco finally é tipicamente utilizado para fechar um recurso como conexão ou transação.
+- O bloco finally, útil para o fechamento de recursos (como conexão);
+-quando há um bloco finally o bloco catch é opcional;
+-que o bloco finally é sempre executado, sem ou com exceção;
+
+try com recurso
+
+O bloco finally é criado automaticamente.
+O recurso precisa implementar o método close().
+
