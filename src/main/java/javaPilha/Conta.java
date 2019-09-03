@@ -3,7 +3,7 @@ package javaPilha;
 public class Conta {
 	
  //método deposita
-	void deposita() {
+	void deposita() throws MinhaExcecao {
 		
 	}
 }
