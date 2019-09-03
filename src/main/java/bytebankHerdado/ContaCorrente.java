@@ -7,7 +7,6 @@ public class ContaCorrente extends Conta implements Tributavel {
 		super(agencia, numero);
 	}
 	
-	@Override //Anotção->Configuração->Compilador //SobreEscrever um método
 	
 	public void saca(double valor) {
         double valorASacar = valor + 0.2;
