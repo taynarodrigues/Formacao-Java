@@ -244,3 +244,32 @@ try com recurso
 O bloco finally é criado automaticamente.
 O recurso precisa implementar o método close().
 
+Sobre FQN
+É o nome completo da classe composto pelo nome do pacote e o nome da classe.
+
+ 
+Correto, o FQN (Full Qualified Name) é nome completo da classe, composto pelo nome do pacote e o nome da classe.
+
+FQN = Nome Pacote . Nome Simples da Classe
+
+Sobre pacotes
+ Packages são diretórios com significado especial dentro do código fonte Java
+A palavra chave package deve ser a primeira declaração no código fonte Java.
+ Packages servem para organização e agrupar as classes e interfaces.
+
+Temos quatro modificadores: private, protected, default e public. Onde a ordem do MAIS restritivo para o MENOS restritivo é: private, default, protected e public.
+
+protected-> O modificador protected funciona igual ao *<<package private>> mas adiciona a visibilidade para os filhos (chamado de "publico para os filhos").
+
+<<package private>> (ausência do modificador) -> A ausência do modificador, também chamado de package private ou default, o membro fica visível na classe e no package, mas é invisível fora do pacote (nem para filhos).
+
+
+aprendemos:
+existem 3 palavras chaves relacionado com a visibilidade: private, protected, public
+existem 4 níveis de visibilidade (de menor para maior):
+private (visível apenas na classe)
+<<package private>> (visível na classe E em qualquer outro membro do mesmo pacote, podendo ser chamado de default)
+protected (visível na classe E em qualquer outro membro do mesmo pacote E para qualquer filho)
+public (visível em qualquer pacote)
+os modificadores podem ser usados na definição da classe, atributo, construtor e método
+
